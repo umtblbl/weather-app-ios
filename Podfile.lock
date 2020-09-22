@@ -10,11 +10,18 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - SwiftLint (0.40.2)
+  - Swinject (2.7.1)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
   - Moya (~> 14.0)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - SwiftLint
+  - Swinject (~> 2.7.1)
+  - SwinjectStoryboard (from `https://github.com/anuragajwani/SwinjectStoryboard`)
 
 SPEC REPOS:
   trunk:
@@ -23,6 +30,17 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SwiftLint
+    - Swinject
+
+EXTERNAL SOURCES:
+  SwinjectStoryboard:
+    :git: https://github.com/anuragajwani/SwinjectStoryboard
+
+CHECKOUT OPTIONS:
+  SwinjectStoryboard:
+    :commit: 821b5abd9d0bdfb05b589de652901152f4d5fa8f
+    :git: https://github.com/anuragajwani/SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
@@ -30,7 +48,10 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftLint: 1216c910d27c2633ade33b4f071bb6b930982e62
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 2f8ade4aa04892731866518d178d7e595d34fb12
+PODFILE CHECKSUM: e9b46239603925dcf6b4f1567d8c184422b8d1ae
 
 COCOAPODS: 1.9.3

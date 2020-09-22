@@ -8,10 +8,10 @@
 
 import Moya
 
-protocol BaseAPI {
+protocol BaseService {
 }
 
-extension BaseAPI {
+extension BaseService {
     
     var baseURL: URL {
         return Configs.Network.baseURL
