@@ -18,7 +18,7 @@ extension BaseService {
     }
         
     var headers: [String : String]? {
-        Configs.Network.headerFields
+        return [:]
     }
     
     func stubbedResponse(fileName: String) -> Data {

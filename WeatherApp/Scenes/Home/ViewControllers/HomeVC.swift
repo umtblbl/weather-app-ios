@@ -15,6 +15,8 @@ class HomeVC: UIViewController, HomeStoryboardLodable {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("test")
-        // Do any additional setup after loading the view.
+        homeVM.todayForecast(cityName: "İzmir").subscribe(onNext: { response in
+            print(response)
+        })
     }
 }

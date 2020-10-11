@@ -6,15 +6,23 @@
 //  Copyright © 2020 umtblbl. All rights reserved.
 //
 
-import Foundation
-import Moya
+import RxSwift
+import RxCocoa
 
-class HomeVM {
+class HomeVM: ViewModel {
     
-    let weatherService: MoyaProvider<WeatherService>
+    let weatherService: WeatherService
     
-    init(weatherService: MoyaProvider<WeatherService>) {
+    init(weatherService: WeatherService) {
         self.weatherService = weatherService
+        super.init()
+        //self.isLoading = indicator.asDriver()
+        
     }
     
+    func todayForecast(cityName: String) -> Observable<TodayForecastResponse> {
+        return weatherService.todayForecast(cityName: cityName).asObservable()
+            .trackActivity(indicator)
+            .trackError(error)
+    }
 }

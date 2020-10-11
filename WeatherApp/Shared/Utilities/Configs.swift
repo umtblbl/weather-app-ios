@@ -12,6 +12,6 @@ struct Configs {
     
     struct Network {
         static let baseURL: URL = URL(string: "https://api.openweathermap.org/data/2.5/")!
-        static let headerFields: [String: String] = ["appid": "05d757070865daeae4ed8a19d49ff8f7"]
+        static let headerFields: [String: String] = ["appid": "fae09bb8a74c921afe4884502f4ecb5f"]
     }
 }

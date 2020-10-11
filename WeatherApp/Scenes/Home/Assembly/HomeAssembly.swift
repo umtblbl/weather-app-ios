@@ -14,13 +14,13 @@ final class HomeAssembly: Assembly {
     func assemble(container: Container) {
         
         // Services
-        container.register(MoyaProvider<WeatherService>.self, factory: { _ in
-            MoyaProvider<WeatherService>()
+        container.register(WeatherService.self, factory: { _ in
+            WeatherService(weatherServiceProvider: MoyaProvider<WeatherAPI>())
         }).inObjectScope(ObjectScope.container)
    
         // ViewModels
         container.register(HomeVM.self, factory: { container in
-            HomeVM(weatherService: container.resolve(MoyaProvider<WeatherService>.self)!)
+            HomeVM(weatherService: container.resolve(WeatherService.self)!)
         }).inObjectScope(ObjectScope.container)
         
         // ViewControllers

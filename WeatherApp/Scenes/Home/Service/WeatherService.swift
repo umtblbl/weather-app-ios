@@ -7,60 +7,23 @@
 //
 
 import Moya
+import RxSwift
 
-enum WeatherService: BaseService {
-    case today(cityName: String)
-    case fourDays(cityName: String)
+protocol WeatherServiceProtocol {
+    var weatherServiceProvider: MoyaProvider<WeatherAPI> { get }
+    func todayForecast(cityName: String) -> Single<TodayForecastResponse>
+    //func fourDays(cityName: String) -> Observable<String>
 }
 
-extension WeatherService: TargetType {
+struct WeatherService: WeatherServiceProtocol {
     
-    var path: String {
-        switch self {
-        case .today:
-            return "weather"
-        case .fourDays:
-            return "forecast/hourly"
-        }
-    }
+    var weatherServiceProvider: MoyaProvider<WeatherAPI>
     
-    var method: Method {
-        switch self {
-        case .today, .fourDays:
-            return .get
-        }
-    }
-    
-    var task: Task {
-        switch self {
-        case .today(let cityName):
-            let headerParameters: [String: Any] = [
-                "q": cityName
-            ]
-            return .requestParameters(parameters: headerParameters, encoding: URLEncoding.default)
-        case .fourDays(let cityName):
-            let headerParameters: [String: Any] = [
-                "q": cityName
-            ]
-            return .requestParameters(parameters: headerParameters, encoding: URLEncoding.default)
-        }
-    }
-    
-    
-}
-
-extension WeatherService {
-    enum StubbedDataType: String {
-        case HourlyWeatherResponse
-        case CurrentWeatherResponse
-    }
-    
-    var sampleData: Data {
-        switch self {
-        case .today:
-            return stubbedResponse(fileName: StubbedDataType.CurrentWeatherResponse.rawValue)
-        default:
-            return stubbedResponse(fileName: StubbedDataType.HourlyWeatherResponse.rawValue)
-        }
+    func todayForecast(cityName: String) -> Single<TodayForecastResponse> {
+        return weatherServiceProvider.rx
+            .request(.today(cityName: cityName))
+            .map(TodayForecastResponse.self)
+            .asObservable()
+            .asSingle()
     }
 }

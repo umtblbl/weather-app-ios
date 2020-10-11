@@ -3,9 +3,16 @@ inhibit_all_warnings!
 
 def shared_pods
   pod 'SwiftLint'
-  pod 'Moya', '~> 14.0'
+  
+  # Network
+  pod 'Moya/RxSwift', '~> 14.0'
+  
+  # RX
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'Action', '~> 4.0'
+  
+  # DI
   pod 'Swinject', '~> 2.7.1'
   pod 'SwinjectStoryboard', :git => 'https://github.com/anuragajwani/SwinjectStoryboard'
 end
