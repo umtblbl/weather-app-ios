@@ -9,6 +9,7 @@ def shared_pods
   
   # RX
   pod 'RxSwift', '~> 5'
+  pod 'NSObject+Rx', '~> 5.0'
   pod 'RxCocoa', '~> 5'
   pod 'Action', '~> 4.0'
   

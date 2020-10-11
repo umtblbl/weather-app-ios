@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController, HomeStoryboardLodable {
+class HomeVC: ViewController, HomeStoryboardLodable {
 
     var homeVM: HomeVM!
     
@@ -17,6 +17,6 @@ class HomeVC: UIViewController, HomeStoryboardLodable {
         print("test")
         homeVM.todayForecast(cityName: "İzmir").subscribe(onNext: { response in
             print(response)
-        })
+        }).disposed(by: rx.disposeBag)
     }
 }

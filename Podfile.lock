@@ -8,6 +8,8 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -22,6 +24,7 @@ PODS:
 DEPENDENCIES:
   - Action (~> 4.0)
   - Moya/RxSwift (~> 14.0)
+  - "NSObject+Rx (~> 5.0)"
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SwiftLint
@@ -33,6 +36,7 @@ SPEC REPOS:
     - Action
     - Alamofire
     - Moya
+    - "NSObject+Rx"
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -52,6 +56,7 @@ SPEC CHECKSUMS:
   Action: 79e6c5dc91e13eea045ab6744b3e5609086671aa
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -59,6 +64,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 59b06383c147c0c98c9df92f61dc7b35fc007ab1
+PODFILE CHECKSUM: 6c59971c91fdac11a8143a834f8e5b567cc35c74
 
 COCOAPODS: 1.9.3

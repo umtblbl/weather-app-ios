@@ -21,6 +21,7 @@
 		03929E73251A7D9A00BE66E0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03929E72251A7D9A00BE66E0 /* AppCoordinator.swift */; };
 		03929E76251A7DA100BE66E0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03929E75251A7DA100BE66E0 /* Coordinator.swift */; };
 		03929E7B251A803500BE66E0 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03929E7A251A803500BE66E0 /* HomeVM.swift */; };
+		039B11F625338A1600DD59EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B11F525338A1600DD59EF /* ViewController.swift */; };
 		03A6FE25252119A500E43E8E /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6FE24252119A500E43E8E /* ErrorTracker.swift */; };
 		03C16102251A842E0003D7EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C16101251A842E0003D7EB /* HomeVC.swift */; };
 		03C16106251A84920003D7EB /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C16105251A84920003D7EB /* HomeAssembly.swift */; };
@@ -52,6 +53,7 @@
 		03929E72251A7D9A00BE66E0 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = Application/AppCoordinator.swift; sourceTree = "<group>"; };
 		03929E75251A7DA100BE66E0 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		03929E7A251A803500BE66E0 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		039B11F525338A1600DD59EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03A6FE24252119A500E43E8E /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		03C16101251A842E0003D7EB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		03C16105251A84920003D7EB /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		038473CC25177793009FB9E4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				039B11F4253389DC00DD59EF /* ViewController */,
 				03D0F653252F9E1A0038E6D3 /* ViewModel */,
 				038473D02517783D009FB9E4 /* Assembly */,
 				036223F32517A6A100060B4C /* Config */,
@@ -292,6 +295,14 @@
 				03929E7A251A803500BE66E0 /* HomeVM.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		039B11F4253389DC00DD59EF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				039B11F525338A1600DD59EF /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		03C16104251A846D0003D7EB /* Assembly */ = {
@@ -464,6 +475,7 @@
 				036224002517C13E00060B4C /* BaseAPI.swift in Sources */,
 				03D0F610252F95590038E6D3 /* Extension+Observable.swift in Sources */,
 				03929E73251A7D9A00BE66E0 /* AppCoordinator.swift in Sources */,
+				039B11F625338A1600DD59EF /* ViewController.swift in Sources */,
 				038473BA251774C5009FB9E4 /* AppDelegate.swift in Sources */,
 				03D0F655252F9E2E0038E6D3 /* ViewModel.swift in Sources */,
 				03C16162251A8DC50003D7EB /* Extension+Swinject.swift in Sources */,
