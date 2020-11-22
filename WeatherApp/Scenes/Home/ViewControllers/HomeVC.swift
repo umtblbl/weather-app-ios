@@ -10,13 +10,13 @@ import UIKit
 
 class HomeVC: ViewController, HomeStoryboardLodable {
 
-    var homeVM: HomeVM!
+    var homeVM: HomeVM?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("test")
-        homeVM.todayForecast(cityName: "İzmir").subscribe(onNext: { response in
-            print(response)
+        homeVM?.todayForecast(cityName: "İzmir").subscribe(onNext: { response in
+            print(L10n.Main.welcome)
         }).disposed(by: rx.disposeBag)
     }
 }

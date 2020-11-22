@@ -16,6 +16,9 @@ def shared_pods
   # DI
   pod 'Swinject', '~> 2.7.1'
   pod 'SwinjectStoryboard', :git => 'https://github.com/anuragajwani/SwinjectStoryboard'
+  
+  #SwiftGen
+  pod 'SwiftGen', '~> 6.0'
 end
 
 target 'WeatherApp' do

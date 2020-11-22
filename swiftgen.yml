@@ -1,0 +1,12 @@
+strings:
+  inputs: WeatherApp/Resources/en.lproj/Localizable.strings
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift5
+      output: WeatherApp/Shared/SwiftGen/Strings.swift
+xcassets:
+  inputs:
+    - WeatherApp/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: WeatherApp/Shared/SwiftGen/Assets.swift

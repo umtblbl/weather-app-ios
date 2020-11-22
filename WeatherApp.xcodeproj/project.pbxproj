@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0321343C25697D2600AF3787 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0321343E25697D2600AF3787 /* Localizable.strings */; };
+		0321344F25697EA900AF3787 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321344E25697EA900AF3787 /* Localizable.swift */; };
+		034D7DBE256A56AD001CCCA8 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7DBC256A56AD001CCCA8 /* Strings.swift */; };
+		034D7DBF256A56AD001CCCA8 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7DBD256A56AD001CCCA8 /* Assets.swift */; };
 		036223F52517A6E900060B4C /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036223F42517A6E900060B4C /* Configs.swift */; };
 		036223FC2517C0CD00060B4C /* CurrentWeatherResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 036223FB2517C0CD00060B4C /* CurrentWeatherResponse.json */; };
 		036223FE2517C10B00060B4C /* HourlyWeatherResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 036223FD2517C10B00060B4C /* HourlyWeatherResponse.json */; };
@@ -36,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0321343D25697D2600AF3787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0321344E25697EA900AF3787 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		034D7DBC256A56AD001CCCA8 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		034D7DBD256A56AD001CCCA8 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		036223F42517A6E900060B4C /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Configs.swift; path = Utilities/Configs.swift; sourceTree = "<group>"; };
 		036223FB2517C0CD00060B4C /* CurrentWeatherResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrentWeatherResponse.json; sourceTree = "<group>"; };
 		036223FD2517C10B00060B4C /* HourlyWeatherResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HourlyWeatherResponse.json; sourceTree = "<group>"; };
@@ -80,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		034D7DB8256A54A7001CCCA8 /* Swiftgen */ = {
+			isa = PBXGroup;
+			children = (
+				034D7DBD256A56AD001CCCA8 /* Assets.swift */,
+				034D7DBC256A56AD001CCCA8 /* Strings.swift */,
+			);
+			path = Swiftgen;
+			sourceTree = "<group>";
+		};
 		036223F32517A6A100060B4C /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,15 +191,16 @@
 		038473CC25177793009FB9E4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				039B11F4253389DC00DD59EF /* ViewController */,
-				03D0F653252F9E1A0038E6D3 /* ViewModel */,
 				038473D02517783D009FB9E4 /* Assembly */,
 				036223F32517A6A100060B4C /* Config */,
 				038473CF25177817009FB9E4 /* Controller */,
 				03929DBA251A6EAB00BE66E0 /* Coordinator */,
 				038473D12517784B009FB9E4 /* Extension */,
 				038473D42517929A009FB9E4 /* Network */,
+				034D7DB8256A54A7001CCCA8 /* Swiftgen */,
 				03E8ED612521045C00CDB8CA /* Utilities */,
+				039B11F4253389DC00DD59EF /* ViewController */,
+				03D0F653252F9E1A0038E6D3 /* ViewModel */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -201,6 +219,7 @@
 			children = (
 				038473C0251774C7009FB9E4 /* Assets.xcassets */,
 				038473D2251778A1009FB9E4 /* StubbedData */,
+				0321343E25697D2600AF3787 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -327,6 +346,7 @@
 				03E8ED732521066200CDB8CA /* ActivityIndicator.swift */,
 				03E8ED622521045C00CDB8CA /* Configs.swift */,
 				03A6FE24252119A500E43E8E /* ErrorTracker.swift */,
+				0321344E25697EA900AF3787 /* Localizable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -360,6 +380,7 @@
 				038473B1251774C5009FB9E4 /* Frameworks */,
 				038473B2251774C5009FB9E4 /* Resources */,
 				CEA2029B40FAD0BB67407EAC /* [CP] Embed Pods Frameworks */,
+				034D7DC1256A575E001CCCA8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -392,6 +413,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 038473AB251774C5009FB9E4;
 			productRefGroup = 038473B5251774C5009FB9E4 /* Products */;
@@ -409,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				036223FE2517C10B00060B4C /* HourlyWeatherResponse.json in Resources */,
+				0321343C25697D2600AF3787 /* Localizable.strings in Resources */,
 				03C161DF251A98050003D7EB /* Home.storyboard in Resources */,
 				036223FC2517C0CD00060B4C /* CurrentWeatherResponse.json in Resources */,
 				03929D29251A67B000BE66E0 /* LaunchScreen.storyboard in Resources */,
@@ -419,6 +442,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		034D7DC1256A575E001CCCA8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen\n";
+		};
 		B44ACBC5584360FF37223E1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,6 +506,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				036223F52517A6E900060B4C /* Configs.swift in Sources */,
+				034D7DBF256A56AD001CCCA8 /* Assets.swift in Sources */,
+				0321344F25697EA900AF3787 /* Localizable.swift in Sources */,
 				03C16102251A842E0003D7EB /* HomeVC.swift in Sources */,
 				03C161DB251A90E60003D7EB /* Extension+Storyboard.swift in Sources */,
 				03C16106251A84920003D7EB /* HomeAssembly.swift in Sources */,
@@ -476,6 +518,7 @@
 				03D0F610252F95590038E6D3 /* Extension+Observable.swift in Sources */,
 				03929E73251A7D9A00BE66E0 /* AppCoordinator.swift in Sources */,
 				039B11F625338A1600DD59EF /* ViewController.swift in Sources */,
+				034D7DBE256A56AD001CCCA8 /* Strings.swift in Sources */,
 				038473BA251774C5009FB9E4 /* AppDelegate.swift in Sources */,
 				03D0F655252F9E2E0038E6D3 /* ViewModel.swift in Sources */,
 				03C16162251A8DC50003D7EB /* Extension+Swinject.swift in Sources */,
@@ -489,6 +532,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0321343E25697D2600AF3787 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0321343D25697D2600AF3787 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		038473C6251774C7009FB9E4 /* Debug */ = {
