@@ -11,8 +11,7 @@ import RxSwift
 
 protocol WeatherServiceProtocol {
     var weatherServiceProvider: MoyaProvider<WeatherAPI> { get }
-    func todayForecast(cityName: String) -> Single<TodayForecastResponse>
-    //func fourDays(cityName: String) -> Observable<String>
+    func todayForecast(cityName: String) -> Single<TodayForecastResponse> 
 }
 
 struct WeatherService: WeatherServiceProtocol {

@@ -12,7 +12,7 @@ import Action
 
 extension HomeVM {
     struct Input {
-        var todayForecastSubject: PublishSubject<String>
+        let todayForecastSubject: PublishSubject<String>        
     }
     struct Output {
         let todayForecastDriver: Driver<TodayForecastResponse>
@@ -28,12 +28,6 @@ class HomeVM: ViewModel, ViewModelType {
         super.init()
         //self.isLoading = indicator.asDriver()
         
-    }
-    
-    func todayForecast(cityName: String) -> Observable<TodayForecastResponse> {
-        return weatherService.todayForecast(cityName: cityName).asObservable()
-            .trackActivity(indicator)
-            .trackError(error)
     }
     
     func transform(input: Input) -> Output {

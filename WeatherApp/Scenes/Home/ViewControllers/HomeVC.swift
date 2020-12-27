@@ -25,15 +25,36 @@ class HomeVC: ViewController, HomeStoryboardLodable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        todayForecastSubject.onNext("Istanbul")
+        cityForecastRequest(cityType: .Istanbul)
     }
     
     override func bindViewModel() {
         
         let output = homeVM?.transform(input: .init(todayForecastSubject: todayForecastSubject) )
+     
+        weatherRefreshButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.cityForecastRequest(cityType: .Istanbul)
+        }).disposed(by: rx.disposeBag)
         
         output?.todayForecastDriver.drive(onNext: { [weak self] response in
-            print(response)
+            self?.handleTodayForecast(forecast: response)
         }).disposed(by: rx.disposeBag)
+    }
+}
+
+extension HomeVC {
+    private func cityForecastRequest(cityType: CityType) {
+        todayForecastSubject.onNext(cityType.rawValue)
+        self.cityNameLabel?.text = cityType.cityName
+    }
+    
+    private func handleTodayForecast(forecast: TodayForecastResponse) {
+        if let weatherMain = forecast.weather?.first?.main, let weatherDescription = forecast.weather?.first?.weatherDescription {
+            self.weatherDescLabel?.text = weatherMain + " " + weatherDescription
+        }
+        self.weatherHumidityLabel?.text = String(forecast.main?.humidity ?? 0)
+        self.weatherWindSpeedLabel?.text = String(forecast.wind?.speed ?? 0)
+        self.weatherPressureLabel?.text = String(forecast.main?.pressure ?? 0)
+        self.weatherTempLabel?.text = String(forecast.main?.temp ?? 0)
     }
 }

@@ -33,7 +33,7 @@ extension WeatherAPI: TargetType {
         case .today(let cityName):
             let headerParameters: [String: Any] = [
                 "q": cityName,
-                "appid": "fae09bb8a74c921afe4884502f4ecb5f"
+                "appid": "---"
             ]
             return .requestParameters(parameters: headerParameters, encoding: URLEncoding.default)
         }
@@ -41,7 +41,7 @@ extension WeatherAPI: TargetType {
 }
 
 extension WeatherAPI {
-    enum StubbedDataType: String {        
+    enum StubbedDataType: String {
         case CurrentWeatherResponse
     }
     
