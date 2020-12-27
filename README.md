@@ -1,3 +1,3 @@
 # Weather-App
 
-![](https://hizliresim.com/RjcZWK)
+![](https://i.hizliresim.com/uGsHrM.png)
