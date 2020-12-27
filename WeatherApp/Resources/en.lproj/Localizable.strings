@@ -1,8 +1,7 @@
-/* 
-  Localizable.strings
-  WeatherApp
-
-  Created by Ümit on 21.11.2020.
-  Copyright © 2020 umtblbl. All rights reserved.
-*/
 "Main.Welcome" = "Welcome";
+"Main.Forecast" = "Forecast:";
+"Main.Temperature" = "Temperature:";
+"Main.Pressure" = "Pressure:";
+"Main.Humidity" = "Humidity:";
+"Main.WindSpeed" = "Wind Speed:";
+"City.Istanbul" = "Istanbul";

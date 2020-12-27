@@ -10,7 +10,6 @@ import Moya
 
 enum WeatherAPI: BaseService {
     case today(cityName: String)
-    case fourDays(cityName: String)
 }
 
 extension WeatherAPI: TargetType {
@@ -19,14 +18,12 @@ extension WeatherAPI: TargetType {
         switch self {
         case .today:
             return "weather"
-        case .fourDays:
-            return "forecast/hourly"
         }
     }
     
     var method: Method {
         switch self {
-        case .today, .fourDays:
+        case .today:
             return .get
         }
     }
@@ -39,19 +36,12 @@ extension WeatherAPI: TargetType {
                 "appid": "fae09bb8a74c921afe4884502f4ecb5f"
             ]
             return .requestParameters(parameters: headerParameters, encoding: URLEncoding.default)
-        case .fourDays(let cityName):
-            let headerParameters: [String: Any] = [
-                "q": cityName,
-                "appid": "fae09bb8a74c921afe4884502f4ecb5f"
-            ]
-            return .requestParameters(parameters: headerParameters, encoding: URLEncoding.default)
         }
     }
 }
 
 extension WeatherAPI {
-    enum StubbedDataType: String {
-        case HourlyWeatherResponse
+    enum StubbedDataType: String {        
         case CurrentWeatherResponse
     }
     
@@ -59,8 +49,6 @@ extension WeatherAPI {
         switch self {
         case .today:
             return stubbedResponse(fileName: StubbedDataType.CurrentWeatherResponse.rawValue)
-        default:
-            return stubbedResponse(fileName: StubbedDataType.HourlyWeatherResponse.rawValue)
         }
     }
 }

@@ -9,5 +9,14 @@
 import UIKit
 import RxSwift
 
-class ViewController: UIViewController {    
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindViewModel()
+    }
+    
+    func bindViewModel() {        
+    }
 }
+

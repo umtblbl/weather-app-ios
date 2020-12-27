@@ -9,6 +9,21 @@
 import Foundation
 
 struct TodayForecastResponse: Codable {
+    init() {
+        self.coord = nil
+        self.weather = nil
+        self.base = nil
+        self.main = nil
+        self.visibility = nil
+        self.wind = nil
+        self.clouds = nil
+        self.dt = nil
+        self.sys = nil
+        self.timezone = nil
+        self.id = nil
+        self.name = nil
+        self.cod = nil
+    }
     let coord: Coord?
     let weather: [Weather]?
     let base: String?

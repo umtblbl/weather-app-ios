@@ -8,6 +8,13 @@
 
 import Foundation
 
+protocol ViewModelType {
+    associatedtype Input
+    associatedtype Output
+    
+    func transform(input: Input) -> Output
+}
+
 class ViewModel {
     let error = ErrorTracker()
     let indicator = ActivityIndicator()

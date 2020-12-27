@@ -11,9 +11,24 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum City {
+    /// Istanbul
+    internal static let istanbul = L10n.tr("Localizable", "City.Istanbul")
+  }
+
   internal enum Main {
+    /// Forecast:
+    internal static let forecast = L10n.tr("Localizable", "Main.Forecast")
+    /// Humidity:
+    internal static let humidity = L10n.tr("Localizable", "Main.Humidity")
+    /// Pressure:
+    internal static let pressure = L10n.tr("Localizable", "Main.Pressure")
+    /// Temperature:
+    internal static let temperature = L10n.tr("Localizable", "Main.Temperature")
     /// Welcome
     internal static let welcome = L10n.tr("Localizable", "Main.Welcome")
+    /// Wind Speed:
+    internal static let windSpeed = L10n.tr("Localizable", "Main.WindSpeed")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

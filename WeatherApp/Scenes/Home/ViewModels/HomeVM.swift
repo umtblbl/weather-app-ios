@@ -8,8 +8,18 @@
 
 import RxSwift
 import RxCocoa
+import Action
 
-class HomeVM: ViewModel {
+extension HomeVM {
+    struct Input {
+        var todayForecastSubject: PublishSubject<String>
+    }
+    struct Output {
+        let todayForecastDriver: Driver<TodayForecastResponse>
+    }
+}
+
+class HomeVM: ViewModel, ViewModelType {
     
     let weatherService: WeatherService
     
@@ -24,5 +34,17 @@ class HomeVM: ViewModel {
         return weatherService.todayForecast(cityName: cityName).asObservable()
             .trackActivity(indicator)
             .trackError(error)
+    }
+    
+    func transform(input: Input) -> Output {
+        
+        let todayForecastDriver = input.todayForecastSubject.flatMap { [weak self] cityName -> Observable<TodayForecastResponse> in
+            guard let self = self else { return .empty() }
+            return self.weatherService.todayForecast(cityName: cityName).asObservable()
+                .trackActivity(self.indicator)
+                .trackError(self.error)
+        }.asDriver(onErrorJustReturn: TodayForecastResponse())
+        
+        return Output(todayForecastDriver: todayForecastDriver)
     }
 }
